@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Product — RubberStamp Shop</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>ECLIPSE PRINTERS</h1>
+        <nav aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a href="#products">Products</a>
+        </nav>
+    </header>
+
+    <main id="main" role="main">
+        <div class="product-page">
+            <a href="index.html" class="back-link">← Back to products</a>
+            <div id="productRoot">Loading product…</div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 RubberStamp Shop</p>
+    </footer>
+
+    <script>
+        // product page reads ?id=stamp-1
+        function qs(name) {
+            const params = new URLSearchParams(location.search);
+            return params.get(name);
+        }
+        async function loadProduct() {
+            const id = qs('id');
+            const root = document.getElementById('productRoot');
+            if (!id) { root.innerHTML = '<p>Product id missing.</p>'; return; }
+            try {
+                const res = await fetch('./data/products.json');
+                const list = await res.json();
+                const p = list.find(x => x.id === id);
+                if (!p) { root.innerHTML = '<p>Product not found.</p>'; return; }
+                root.innerHTML = `
+          <div class="product-detail">
+            <img src="${p.image}" alt="${p.title}" loading="lazy" decoding="async">
+            <div class="product-info">
+              <h2>${p.title}</h2>
+              <p class="price">KES ${p.price}</p>
+              <p>${p.description}</p>
+              <button class="btn add-to-cart" data-id="${p.id}" data-price-kes="${p.price}">Add to cart</button>
+            </div>
+          </div>
+        `;
+            } catch (e) { root.innerHTML = '<p>Failed to load product.</p>'; }
+        }
+        loadProduct();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+[
+    {
+        "id": "stamp-1",
+        "title": "Shiny Date Stamp S-312",
+        "price": 1650,
+        "description": "Self-inking date stamp, red ink. Durable and reliable for office use.",
+        "image": "./images/eclipseprinters-stamp-s312.jpg"
+    },
+    {
+        "id": "stamp-2",
+        "title": "Shiny Date Stamp S-300",
+        "price": 2200,
+        "description": "Larger date stamp with adjustable bands, suitable for high-frequency stamping.",
+        "image": "./images/eclipseprinters-stamp-s300.jpg"
+    },
+    {
+        "id": "stamp-3",
+        "title": "Custom Shiny Stamp 30x50",
+        "price": 950,
+        "description": "Customizable text stamp 30x50mm. Great for small logos and signatures.",
+        "image": "./images/eclipseprinters-custom-30x50.jpg"
+    },
+    {
+        "id": "stamp-4",
+        "title": "Shiny Date Stamp S-303",
+        "price": 1800,
+        "description": "Two-color self-inking date stamp for emphasis and multi-color marking.",
+        "image": "./images/eclipseprinters-stamp-s303.jpg"
+    },
+    {
+        "id": "stamp-5",
+        "title": "Shiny Stamp 22x58 (Yellow)",
+        "price": 1200,
+        "description": "Yellow ink variant for visibility; ideal for highlighting and marking.",
+        "image": "./images/eclipseprinters-22x58-yellow.jpg"
+    },
+    {
+        "id": "stamp-6",
+        "title": "Shiny Stamp 22x58",
+        "price": 1150,
+        "description": "Standard 22x58mm stamp for addresses and logos.",
+        "image": "./images/eclipseprinters-22x58.jpg"
+    },
+    {
+        "id": "stamp-7",
+        "title": "Wooden Rubber Stamp (Custom)",
+        "price": 2500,
+        "description": "Classic wooden handle stamp, customizable with your design. Multiple sizes available.",
+        "image": "./images/eclipseprinters-wooden-stamp.jpg"
+    }
+]

@@ -1,0 +1,252 @@
+:root {
+    --accent: #2d6cdf;
+    --bg: #f7f7fb;
+    --text: #111
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+    margin: 0;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.4
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #fff;
+    border-bottom: 1px solid #e6e9ef
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 1.15rem
+}
+
+.site-header nav a {
+    margin-left: 1rem;
+    color: var(--accent);
+    text-decoration: none
+}
+
+.hero {
+    padding: 3rem 2rem;
+    text-align: center
+}
+
+.hero h2 {
+    margin: 0 0 .5rem;
+    font-size: 1.75rem
+}
+
+.cta {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .6rem 1rem;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none
+}
+
+.products {
+    padding: 1rem 2rem
+}
+
+.products h3 {
+    margin-top: 0
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem
+}
+
+.card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #eef2f6
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px
+}
+
+.card h4 {
+    margin: .5rem 0
+}
+
+.price {
+    font-weight: 600;
+    color: var(--accent)
+}
+
+.btn {
+    display: inline-block;
+    padding: .5rem .75rem;
+    border-radius: 6px;
+    border: none;
+    background: #222;
+    color: #fff;
+    cursor: pointer
+}
+
+.add-to-cart {
+    background: var(--accent)
+}
+
+.about,
+.contact {
+    padding: 1rem 2rem;
+    margin-top: 1rem
+}
+
+form label {
+    display: block;
+    margin-bottom: .5rem
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: .5rem;
+    border: 1px solid #d6dbe6;
+    border-radius: 6px
+}
+
+footer {
+    padding: 1rem 2rem;
+    text-align: center;
+    color: #6b7280;
+    font-size: .9rem
+}
+
+@media(min-width:800px) {
+    .hero {
+        padding: 4rem 6rem
+    }
+
+    .site-header {
+        padding: 1rem 3rem
+    }
+}
+
+/* Cart and header actions */
+.header-actions {
+    display: flex;
+    align-items: center
+}
+
+.cart-btn {
+    background: transparent;
+    border: 1px solid #d6dbe6;
+    padding: .4rem .6rem;
+    border-radius: 6px;
+    cursor: pointer
+}
+
+.cart-drawer {
+    position: fixed;
+    right: 1rem;
+    top: 6rem;
+    width: 320px;
+    max-height: 70vh;
+    overflow: auto;
+    background: #fff;
+    border: 1px solid #e6e9ef;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(16, 24, 40, 0.08)
+}
+
+.cart-drawer.hidden {
+    display: none
+}
+
+.cart-row {
+    display: flex;
+    justify-content: space-between;
+    padding: .4rem 0;
+    border-bottom: 1px solid #f1f5f9
+}
+
+.cart-total {
+    font-weight: 700;
+    margin-top: .5rem
+}
+
+.cart-actions {
+    display: flex;
+    gap: .5rem;
+    margin-top: .75rem
+}
+
+.cart-note {
+    font-size: .8rem;
+    color: #6b7280;
+    margin-top: .75rem
+}
+
+/* Floating WhatsApp button */
+.floating-whatsapp {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(16, 24, 40, 0.12);
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    z-index: 999;
+}
+
+.floating-whatsapp svg {
+    display: block;
+}
+
+.floating-whatsapp:hover {
+    transform: translateY(-2px);
+}
+
+/* Accessibility: skip link */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    position: static;
+    left: 0;
+    width: auto;
+    height: auto;
+    background: #fff;
+    padding: 8px 12px;
+    z-index: 1000;
+}
+
+/* Improve focus outline for interactive elements */
+button:focus,
+a:focus {
+    outline: 3px solid #ffd54f;
+    outline-offset: 2px;
+}

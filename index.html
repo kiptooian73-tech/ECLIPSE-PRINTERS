@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="canonical" href="https://eclipseprinters.com/">
+    <title>ECLIPSE PRINTERS</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <h1>ECLIPSE PRINTERS</h1>
+        <nav aria-label="Primary">
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+            <button id="cartBtn" class="cart-btn">Cart (<span id="cartCount">0</span>)</button>
+        </div>
+    </header>
+
+    <main id="main" role="main">
+        <section class="hero">
+            <h2>Custom rubber stamps made easy</h2>
+            <p>Create personalized stamps for businesses, crafts, and stationery.</p>
+            <a class="cta" href="#products">Browse Stamps</a>
+        </section>
+
+        <section id="products" class="products">
+            <h3>Featured Stamps</h3>
+            <div class="grid">
+                <article class="card">
+                    <img src="./images/Shiny Self Inking Rubber Date Stamp - S-312 - RED….jpg"
+                        alt="Shiny Date Stamp S-312" loading="lazy" decoding="async">
+                    <h4>Shiny Date Stamp S-312</h4>
+                    <p class="price">KES 1,650</p>
+                    <button class="btn add-to-cart" data-id="stamp-1" data-price-kes="1650">Add to cart</button>
+                </article>
+
+                <article class="card">
+                    <img src="./images/Shiny Self-Inking Rubber Date Stamp - S-300….jpg" alt="Shiny Date Stamp S-300"
+                        loading="lazy" decoding="async">
+                    <h4>Shiny Date Stamp S-300</h4>
+                    <p class="price">KES 2,200</p>
+                    <button class="btn add-to-cart" data-id="stamp-2" data-price-kes="2200">Add to cart</button>
+                </article>
+
+                <article class="card">
+                    <img src="./images/Shiny S-303 Self-Inking 2-Color Rubber Date….jpg" alt="Shiny Date Stamp S-303"
+                        loading="lazy" decoding="async">
+                    <h4>Shiny Date Stamp S-303</h4>
+                    <p class="price">KES 1,800</p>
+                    <button class="btn add-to-cart" data-id="stamp-4" data-price-kes="1800">Add to cart</button>
+                </article>
+
+                <article class="card">
+                    <img src="./images/Custom Rubber Stamp Shiny Personalized 30 x 50 mm (1-3_16_ x 2_).jpg"
+                        alt="Custom Shiny Stamp 30x50" loading="lazy" decoding="async">
+                    <h4>Custom Shiny Stamp 30x50</h4>
+                    <p class="price">KES 950</p>
+                    <button class="btn add-to-cart" data-id="stamp-3" data-price-kes="950">Add to cart</button>
+                </article>
+
+                <article class="card">
+                    <img src="./images/Custom Rubber Stamp Shiny Personalized 22mmx58mm Yellow S-844.jpg"
+                        alt="Shiny Stamp 22x58 (Yellow)" loading="lazy" decoding="async">
+                    <h4>Shiny Stamp 22x58 (Yellow)</h4>
+                    <p class="price">KES 1,200</p>
+                    <button class="btn add-to-cart" data-id="stamp-5" data-price-kes="1200">Add to cart</button>
+                </article>
+
+                <article class="card">
+                    <img src="./images/Custom Rubber Stamp Shiny Personalized 22mmx58mm.jpg" alt="Shiny Stamp 22x58"
+                        loading="lazy" decoding="async">
+                    <h4>Shiny Stamp 22x58</h4>
+                    <p class="price">KES 1,150</p>
+                    <button class="btn add-to-cart" data-id="stamp-6" data-price-kes="1150">Add to cart</button>
+                </article>
+
+                <article class="card">
+                    <img src="./images/Custom Stamp – Personalized Wooden Rubber Stamp with Logo, Name, and Address, Upload Your Own Design, Multiple Sizes for Branding & Crafting (.jpg"
+                        alt="Wooden Rubber Stamp (custom)" loading="lazy" decoding="async">
+                    <h4>Wooden Rubber Stamp (Custom)</h4>
+                    <p class="price">KES 500</p>
+                    <button class="btn add-to-cart" data-id="stamp-7" data-price-kes="2500">Add to cart</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h3>About</h3>
+            <p>We make custom rubber stamps quickly with quality materials. Perfect for crafters and small businesses.
+            </p>
+        </section>
+
+        <section id="contact" class="contact">
+            <h3>Contact</h3>
+            <form id="contactForm">
+                <label>Name<input name="name" required></label>
+                <label>Email<input type="email" name="email" required></label>
+                <label>Message<textarea name="message" rows="4" required></textarea></label>
+                <button class="btn" type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 RubberStamp Shop</p>
+    </footer>
+
+    <aside id="cartDrawer" class="cart-drawer hidden">
+        <h4>Your cart</h4>
+        <div id="cartItems"></div>
+        <div class="cart-total">Total: <span id="cartTotal">KES 0</span></div>
+
+        <form id="orderDetails" class="order-details">
+            <label>Name<input id="custName" name="name" required placeholder="Your full name"></label>
+            <label>Phone<input id="custPhone" name="phone" required placeholder="2547XXXXXXXX"></label>
+            <label>Delivery / Address<textarea id="custAddress" name="address" rows="3"
+                    placeholder="Street, city, landmark"></textarea></label>
+        </form>
+
+        <div class="cart-actions">
+            <button id="whatsappBtn" class="btn">Buy via WhatsApp</button>
+            <button id="clearCart" class="btn">Clear cart</button>
+        </div>
+        <p class="cart-note">Orders are placed via WhatsApp in Kenyan Shillings. Set the merchant WhatsApp number in
+            <code>script.js</code>.
+        </p>
+    </aside>
+
+    <script src="./script.js"></script>
+    <button id="floatingWhatsapp" class="floating-whatsapp" title="Buy via WhatsApp">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M20.52 3.48A11.92 11.92 0 0012 0C5.373 0 .001 5.373.001 12c0 2.116.553 4.183 1.6 6.012L0 24l6.21-1.602A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12 0-3.197-1.247-6.198-3.48-8.52z"
+                fill="#25D366" />
+            <path
+                d="M17.47 14.08c-.29-.15-1.71-.84-1.97-.94-.27-.1-.47-.15-.67.15s-.77.94-.95 1.13c-.17.19-.35.22-.64.07-.29-.15-1.22-.45-2.33-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.6.13-.12.29-.32.44-.48.15-.17.2-.29.3-.48.1-.19.05-.36-.02-.51-.07-.15-.67-1.62-.92-2.22-.24-.59-.48-.51-.67-.52-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.29-1 1-1 2.44 0 1.45 1.02 2.85 1.16 3.05.15.2 2.01 3.1 4.87 4.34 2.12 1 2.98 1.05 3.23.99.24-.06 1.45-.61 1.66-1.2.21-.58.21-1.08.15-1.2-.06-.12-.24-.19-.5-.34z"
+                fill="#fff" />
+        </svg>
+    </button>
+</body>
+
+</html>
